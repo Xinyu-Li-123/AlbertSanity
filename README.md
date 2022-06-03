@@ -3,6 +3,10 @@
 ## About
 `AlbertSanity` is a module that provides many shortcuts to retrieve information from the course selection website Albert of New York University. These shortcuts are integrated in the class `AlbertNavigator.AlbertNavigator`. The scrapping is done using the python package  `selenium`. This package is chosen because it can emulate a browser, which allow us to scrape information that requires clicking certain links that load new information by executing some JavaScript functions within the page. 
 
+<img src="D:\Eiger\Coding\project\AlbertSanity\res\demo.png" width=500>
+
+
+
 
 ## Quick Start
 For a first example, we first set up the environment by running the following commands in cmd.
