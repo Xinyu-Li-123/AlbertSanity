@@ -5,7 +5,6 @@ import time
 from utils import utils
 
 
-
 class AlbertNavigator:
     def __init__(self, is_text_only=False):
         self.major = ""
@@ -13,7 +12,7 @@ class AlbertNavigator:
         self.course_elements_dict = {}
         self.__page = utils.PAGE.INITIAL
         self.is_text_only = is_text_only
-    
+
     @property
     def page(self):
         return self.__page
@@ -252,17 +251,15 @@ class AlbertNavigator:
 if __name__ == "__main__":
     
     # demo
-    myNavigator = AlbertNavigator()
-    myNavigator.open()
- 
-    myNavigator.select_major("Computer Science (CSCI-UA)")
-    myNavigator.list_all_courses_of_major()
-    myNavigator.list_all_classes_of_course("CSCI-UA 201", level_of_detail=0)
-    myNavigator.check_class_status(7444)
-
-    myNavigator.select_major("MATH-GA")
-    myNavigator.list_all_courses_of_major()
-
-    myNavigator.get_course_information("MATH-UA 252")
+    with AlbertNavigator() as myNavigator:
     
-    myNavigator.close()
+        myNavigator.select_major("Computer Science (CSCI-UA)")
+        myNavigator.list_all_courses_of_major()
+        myNavigator.list_all_classes_of_course("CSCI-UA 201", level_of_detail=0)
+        myNavigator.check_class_status(7444)
+
+        myNavigator.select_major("MATH-GA")
+        myNavigator.list_all_courses_of_major()
+
+        myNavigator.get_course_information("MATH-UA 252")
+        

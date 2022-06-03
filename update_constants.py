@@ -1,6 +1,5 @@
 # The constants to be updated are:
 # - MAJOR_LINK_ID_LIST
-# - 
 
 
 from selenium import webdriver

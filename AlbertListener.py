@@ -8,7 +8,7 @@ The "targets.json" is formatted like this:
 
 """
 import json
-from AlbertSanity import *
+from AlbertNavigator import *
 
 with open("targets.json", "rb") as file:
     targets = json.load(file)
