@@ -1,0 +1,6 @@
+**/__pycache__/
+out/
+venv/
+scrape_test_selenium.py
+architecture.txt
+

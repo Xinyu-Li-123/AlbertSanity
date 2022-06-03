@@ -1,0 +1,9 @@
+{
+    "Computer Science (CSCI-UA)": ["CSCI-UA 201 Computer Systems Org", 
+                                    7457, 7458, 9549, 8575, 8901, 9548, 8902, 8903, 9550, 23230, 23232, 23233],
+    "Computer Science (CSCI-GA)": ["CSCI-GA Scientific Computing", 2463],
+    "Mathematics (MATH-GA)": ["MATH-GA 2563 Harmonic Analysis", 
+                               3295,
+                              "MATH-GA 2043 Scientific Computing",
+                               2697]                               
+}
