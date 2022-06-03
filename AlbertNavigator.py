@@ -31,7 +31,7 @@ class AlbertNavigator:
     def __exit__(self, type=None, value=None, tb=None):
         self.driver.close()
         self._clear()
-        self._page = utils.PAGE.INITIAL
+        self.__page = utils.PAGE.INITIAL
         utils.nav_print("The current broswer is closed", 
                     utils.HEADER.NAVIGATOR_HEADER, self.is_text_only)
 
@@ -42,7 +42,7 @@ class AlbertNavigator:
         self.__exit__()
     
     def _is_in_page(self, page):
-        if self._page != page:
+        if self.__page != page:
             return False
         return True
     
@@ -56,7 +56,7 @@ class AlbertNavigator:
     def _back(self): # go to next page
         if not self._is_in_page(utils.PAGE.INITIAL):
             self.driver.find_element(by=By.ID , value="NYU_CLS_DERIVED_BACK").click()
-            self._page = utils.PAGE.INITIAL
+            self.__page = utils.PAGE.INITIAL
             # for i in range(3):
             #     try:
             #         time.sleep(5)
@@ -110,7 +110,7 @@ class AlbertNavigator:
 
                 utils.nav_print("Major information obtained", 
                     utils.HEADER.NAVIGATOR_HEADER, self.is_text_only)
-                self._page = utils.PAGE.MAJOR
+                self.__page = utils.PAGE.MAJOR
                 return 
             entry_cnt += 1
         utils.nav_print(f"Major: '{major_name}' is not found, please try again.", 
@@ -223,7 +223,7 @@ class AlbertNavigator:
                         utils.nav_print(class_no, utils.HEADER.TEXT_HEADER, self.is_text_only)
         
     
-    def get_course_information(self, target_course_id):
+    def list_course_information(self, target_course_id):
         print()
         if target_course_id != self.major.split("(")[1][:-1]:
         #     utils.nav_print("You are not in the webpage of a Major. Please redirect to a Major page by Navigator.redirect_to_major(major_name).", 
@@ -261,5 +261,5 @@ if __name__ == "__main__":
         myNavigator.select_major("MATH-GA")
         myNavigator.list_all_courses_of_major()
 
-        myNavigator.get_course_information("MATH-UA 252")
+        myNavigator.list_course_information("MATH-UA 252")
         

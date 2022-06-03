@@ -31,17 +31,17 @@ with AlbertNavigator() as myNavigator:
 
 
 ## Functionality
-- [x]   Given major name (CSCI-UA), return all course names (`AlbertNavigator`)
-- [x]   Given course name (CSCI-UA 4), return its information
-- [x]   Given course name (CSCI-UA 4), return all classes
-- [x]   Given a list of courses, find all possible schedules
+- [x]    Given major name (CSCI-UA), return all course names (`AlbertNavigator.list_all_courses_of_major`)
+- [x]    Given course name (CSCI-UA 4), return its information (`AlbertNavigator.list_course_information`)
+- [x]    Given course name (CSCI-UA 4), return all classes (`AlbertNavigator.list_all_classes_of_courses`)
+- [x]    *Given a list of courses, find all possible schedules (`AlbertNavigator.listen_to`)
 
-
+*For this functionality, you can also modify the `targets.json` file and run `python AlbertListener.py`. The `targets.json` contains a list of target classes and comments. For any element of the list, if it's a string, it is identified as a comment and will be directly printed out. If it's a number, it is identified as the class number of the target class.
 
 ## Todo
 - [ ]   Given a list of class numbers of wanted classes, check regularly if it's open / waitlist / closed
 
 
 ## Environment
-I use python 3.7.9 on windows 10. For the modules I use, see [requirements.txt](./requirements.txt)
+I use python 3.7.9 on windows 10. For the modules I used, see [requirements.txt](./requirements.txt)
 
